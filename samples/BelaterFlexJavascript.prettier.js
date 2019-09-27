@@ -1,3 +1,4 @@
+// This is the original javascript, just put through prettier, using `npx prettier --write ./samples/BelaterFlexJavascript.prettier.js`
 function _oao() {
   var cookie = document.cookie.indexOf("wp-settings-time") !== -1;
 
