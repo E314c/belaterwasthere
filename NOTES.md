@@ -18,7 +18,7 @@ belaterbewasthere.com has address 162.241.175.38
 
  - towards the end it seems to try to make three API calls:
    - it retrieves a `_wpnonce` value from the first call, then attempt 2 more calls
-     - I suspect this is a persistence mechanism: aiming to use credentials of an Admin checking the page to create an account or add another malicious plugin.
+     - I suspect this is a persistence mechanism: aiming to use credentials of an Admin checking the page to perform some action, such as attach weak plugin or create backdoor for malicous user
 - Page is redirected to `https://capital.belaterbewasthere.com/len.php?s=678&_id=129843478&utm=gfhklew45`
 - The browser gets redirected to one of the secondary domains
 - The `greenrelaxfollow` and `redrelaxfollow` pages attempt to force a user to allow notifications.
@@ -42,6 +42,7 @@ belaterbewasthere.com has address 162.241.175.38
 ### Standard obfuscation patterns:
 - strings encoded with unicode. eg/ `'string'` is encoded as `'\x73\x74\x72\x69\x6e\x67'`
 - array shuffling
+- Base64 decoding
 - Nop sections: 
   - encoding and decoding of data
     - `for(var _0x39fa62=0x0,_0x31aa32=_0x1f7823['length'];_0x39fa62<_0x31aa32;_0x39fa62++){_0x58b7c1+='%'+('00'+_0x1f7823['charCodeAt'](_0x39fa62)['toString'](0x10))['slice'](-0x2);}_0x1f7823=decodeURIComponent(_0x58b7c1);` is uriEncode of `_0x1f7823` into `_0x58b7c1`, followed by a decode of `_0x58b7c1` into `_0x1f7823`.
@@ -51,6 +52,7 @@ belaterbewasthere.com has address 162.241.175.38
 - other methods of getting values
   - all numbers noted in hex. eg/ `0x0`
   - `true`/`false` encoded as `!![]` and`![]` respectively (shorter represenations)
+
 
 ### Anti-prettifiers?
 ```js
@@ -76,6 +78,14 @@ return this['JNhbcC'](_0x42fc30);
 This portion of code is interesting, as it uses `Function.prototype.toString()` to get the string representation of a function.
 It could be just checking to see if the previous function (`_0x29532a`) had been run (and thus attached the refernce to `this`), but this regex will also fail if the source could has been prettified and newline characters have been added to the function.
 
+### Inifinte loop techinques
+- a common infinite loop technique i'm seeing is to have a `for` loop where the condition is that `x < array.length`, but in each iteration it will push to the array and increment x, so the result is the same at each iteration until the array cannot allocate more.
 
 ### MISC
 - Requires jQuery is present in the document
+- Has a portion to detect if `atob` is present on the global context and add it if not
+  - `atob` is not present in `NodeJs`
+    - but this script is not designed to run in NodeJs
+  - Suspect it's the use of am exploit bundler
+- There are many process trapping mechanisms: infinite loops, infinite recursion, etc
+  - I've yet to figure out under what circumstances these are triggered, as I've been seeing them in my control runs of the script in a browser environment, but they obviously did not occur when the original sript run
