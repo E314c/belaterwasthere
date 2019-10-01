@@ -79,7 +79,10 @@ This portion of code is interesting, as it uses `Function.prototype.toString()` 
 It could be just checking to see if the previous function (`_0x29532a`) had been run (and thus attached the refernce to `this`), but this regex will also fail if the source could has been prettified and newline characters have been added to the function.
 
 ### Inifinte loop techinques
-- a common infinite loop technique i'm seeing is to have a `for` loop where the condition is that `x < array.length`, but in each iteration it will push to the array and increment x, so the result is the same at each iteration until the array cannot allocate more.
+- a common infinite loop technique i'm seeing is to have a `for` loop where the condition is that `x < y`, but in each iteration it will push to the array, set `y` to the array legnth and also increment x, so the result is the same at each iteration until the array cannot allocate more.
+
+### Decoding the strings
+Details are in the [StringDecoding.md](./StringDecoding.md) document, as there's a lot of data to present and cover
 
 ### MISC
 - Requires jQuery is present in the document
@@ -89,3 +92,12 @@ It could be just checking to see if the previous function (`_0x29532a`) had been
   - Suspect it's the use of am exploit bundler
 - There are many process trapping mechanisms: infinite loops, infinite recursion, etc
   - I've yet to figure out under what circumstances these are triggered, as I've been seeing them in my control runs of the script in a browser environment, but they obviously did not occur when the original sript run
+
+## Code labels
+Whilst doing the analysis, I found it useful to come up with some labels that I could comment next to features to find them later.
+Primarily the anti-RE techniques, so they can be neutered when running it dynamically to check functionality.
+| Label | Description |
+| --- | --- |
+| ANTPRT | Anti-prettifier: This function checks if the code has been prettified |
+| INFLP | Inifinite Loop: This section of code will trap execution and never return |
+
