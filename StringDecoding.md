@@ -67,58 +67,58 @@ This results in a final order of the array `_0x5112` is:
 
 ## Strings:
 
-| Index | Encoded | Mask | Value | Predicted Value |
+| Index | Encoded | Mask | Value |
 | --- | --- | --- | --- | --- |
-| 0x01 | `"w5paIRt4"` |  |  |  |
-| 0x02 | `"w5tSwpDCu0DCjDLDu0k="` | `h%a7` |  | 'object' |
-| 0x03 | `"DsOKAcK6wpzDng=="` | `nh)U` |  | 'function' |
-| 0x04 | `"w6NgfcK7PAwUwpo="` | `nGIV` |  | 'object' |
-| 0x05 | `"wpPCv8K4wq3Dt8KA"` |  |  |  |
-| 0x06 | `"w6zCtsOqwoR3S3M="` |  |  |  |
-| 0x07 | `"CFHDkWt/bcOU"` |  |  |  |
-| 0x08 | `"FcOFwo0="` |  |  |  |
-| 0x09 | `"PQ8vw4o="` |  |  |  |
-| 0x0a | `"T28APsOI"` |  |  |  |
-| 0x0b | `"w5fDsW7DvA=="` |  |  |  |
-| 0x0c | `"w53DksK9IcOJ"` |  |  |  |
-| 0x0d | `"PBbDj8Oow5TDmsOjRgM="` |  |  |  |
-| 0x0e | `"DcOYwovCocKA"` |  |  |  |
-| 0x0f | `"w652J0QsdSo="` |  |  |  |
-| 0x10 | `"GAXCig=="` |  |  |  |
-| 0x11 | `"wrheKnQ0wpg5"` |  |  |  |
-| 0x12 | `"w7jCuMO2wpk="` |  |  |  |
-| 0x13 | `"w5vDj8KhPcOUVcOR"` |  |  |  |
-| 0x14 | `"XlR1w5LCkA=="` |  |  |  |
-| 0x15 | `"w5jCkGxYRMOwwoA="` |  |  |  |
-| 0x16 | `"U19xw4g="` |  |  |  |
-| 0x17 | `"w43Clm8ew4vDlSo="` |  |  |  |
-| 0x18 | `"TngQJMOd"` |  |  |  |
-| 0x19 | `"w4VPw6PCqMOQwptj"` |  |  |  |
-| 0x1a | `"woLDiWliw4U8wqnChcOd"` |  |  |  |
-| 0x1b | `"KQEzw5fDisKOwqU="` |  |  |  |
-| 0x1c | `"NMKJW8Orw40="` | `` |  |  |
-| 0x1d | `"w4N/JMORBsKYwo/CjVc="` |  |  |  |
-| 0x1e | `"w5vCu39zwqPChsKweA=="` |  |  |  |
-| 0x1f | `"wrTCkw8Ww6FO"` |  |  |  |
-| 0x20 | `"eETDmktlT1rCokdowpoZw6AGw6LDg8OGwq/Dn8Oiwq7CmSkFfQHDn8Omwqg="` |  |  |  |
-| 0x21 | `"b8KMSsKlw4nCiE3DjMOUw6QPwoTDkxXCocKCwoB2wop4wps="` |  |  |  |
-| 0x22 | `"KXXCu1Vfw4PDoAo9wp3CtyAzQsK2ZVLDnxYdwqZnJUo="` |  |  |  |
-| 0x23 | `"IRrCkcK5wr7CpMKTwrDCl8KBHcKjMwzCq8OvU8K4w7PCkcOww7UWECc1woLCrgnDoMKKw7BGw7jDjsKfw5BaS8Ofw64="` |  |  |  |
-| 0x24 | `"V8OSw57Csl8UwqXDrcOFYA=="` |  |  |  |
-| 0x25 | `"DSsJ"` |  |  |  |
-| 0x26 | `"DMKtwp9lD8KrYMOJEMK+ScObWA=="` |  |  |  |
-| 0x27 | `"w4pPw6o="` |  |  |  |
-| 0x28 | `"SSXDvD8="` |  |  |  |
-| 0x29 | `"w5bCnnZIQw=="` |  |  |  |
-| 0x2a | `"w7rDsMOVwoE="` |  |  |  |
-| 0x2b | `"YQbCgCg8w4c="` |  |  |  |
-| 0x2c | `"w7vCkRR2YcKjwr4="` |  |  |  |
-| 0x2d | `"RErCjDZ6csKO"` |  |  |  |
-| 0x2e | `"dg/Cn8Kjw47DncK1"` |  |  |  |
-| 0x2f | `"wqTDv8Krwrs="` |  |  |  |
-| 0x30 | `"XG/Clh7Dq1zDk8OQ"` |  |  |  |
-| 0x31 | `"wp3Cj1FDE8KYwrtJbg=="` |  |  |  |
-| 0x32 | `"CcOgJsOL"` | `nGIV` |  | 'stop' |
-| 0x33 | `"wo/CqcK9wrg="` | `l5iB` | `"https://bes.belaterbewasthere.com/rst/"` |  |
-| 0x34 | `"w4LDi8OywqXDvEBuw4PDlMKmHcOVwpvCvCLChsOww5bDjsKgwrBTw7IBJsOwwpt7GX7DgmhYw6sVwqgYw48="` | `*qHT` | `replace` |  |
-| 0x35 | `"wqlUNGs6wpc5"` |  |  |  |
+| 0x01 | `"w5paIRt4"` |  |  |
+| 0x02 | `"w5tSwpDCu0DCjDLDu0k="` | `h%a7` | 'object' |
+| 0x03 | `"DsOKAcK6wpzDng=="` | `nh)U` | 'function' |
+| 0x04 | `"w6NgfcK7PAwUwpo="` | `nGIV` | 'object' |
+| 0x05 | `"wpPCv8K4wq3Dt8KA"` |  |  |
+| 0x06 | `"w6zCtsOqwoR3S3M="` |  |  |
+| 0x07 | `"CFHDkWt/bcOU"` |  |  |
+| 0x08 | `"FcOFwo0="` |  |  |
+| 0x09 | `"PQ8vw4o="` |  |  |
+| 0x0a | `"T28APsOI"` |  |  |
+| 0x0b | `"w5fDsW7DvA=="` |  |  |
+| 0x0c | `"w53DksK9IcOJ"` |  |  |
+| 0x0d | `"PBbDj8Oow5TDmsOjRgM="` |  |  |
+| 0x0e | `"DcOYwovCocKA"` |  |  |
+| 0x0f | `"w652J0QsdSo="` |  |  |
+| 0x10 | `"GAXCig=="` |  |  |
+| 0x11 | `"wrheKnQ0wpg5"` |  |  |
+| 0x12 | `"w7jCuMO2wpk="` |  |  |
+| 0x13 | `"w5vDj8KhPcOUVcOR"` |  |  |
+| 0x14 | `"XlR1w5LCkA=="` |  |  |
+| 0x15 | `"w5jCkGxYRMOwwoA="` |  |  |
+| 0x16 | `"U19xw4g="` |  |  |
+| 0x17 | `"w43Clm8ew4vDlSo="` |  |  |
+| 0x18 | `"TngQJMOd"` |  |  |
+| 0x19 | `"w4VPw6PCqMOQwptj"` |  |  |
+| 0x1a | `"woLDiWliw4U8wqnChcOd"` |  |  |
+| 0x1b | `"KQEzw5fDisKOwqU="` |  |  |
+| 0x1c | `"NMKJW8Orw40="` | `ouTR` | 'undefined' |
+| 0x1d | `"w4N/JMORBsKYwo/CjVc="` | `pQwL` | 'protocol' |
+| 0x1e | `"w5vCu39zwqPChsKweA=="` | `7Gn)` | 'domain' |
+| 0x1f | `"wrTCkw8Ww6FO"` | `hbB#` | '/wp-admin/options-general.php' |
+| 0x20 | `"eETDmktlT1rCokdowpoZw6AGw6LDg8OGwq/Dn8Oiwq7CmSkFfQHDn8Omwqg="` | `VWn3` | '/wp-admin/options.php' |
+| 0x21 | `"b8KMSsKlw4nCiE3DjMOUw6QPwoTDkxXCocKCwoB2wop4wps="` | `P[RT` | '/wp-admin/admin-ajax.php' |
+| 0x22 | `"KXXCu1Vfw4PDoAo9wp3CtyAzQsK2ZVLDnxYdwqZnJUo="` | `A[tK` | 'https://bes.belaterbewasthere.com/reserv/' |
+| 0x23 | `"IRrCkcK5wr7CpMKTwrDCl8KBHcKjMwzCq8OvU8K4w7PCkcOww7UWECc1woLCrgnDoMKKw7BGw7jDjsKfw5BaS8Ofw64="` | `&zYW` | 'noConflict' |
+| 0x24 | `"V8OSw57Csl8UwqXDrcOFYA=="` |  |  |
+| 0x25 | `"DSsJ"` |  |  |
+| 0x26 | `"DMKtwp9lD8KrYMOJEMK+ScObWA=="` |  |  |
+| 0x27 | `"w4pPw6o="` |  |  |
+| 0x28 | `"SSXDvD8="` |  |  |
+| 0x29 | `"w5bCnnZIQw=="` |  |  |
+| 0x2a | `"w7rDsMOVwoE="` |  |  |
+| 0x2b | `"YQbCgCg8w4c="` |  |  |
+| 0x2c | `"w7vCkRR2YcKjwr4="` |  |  |
+| 0x2d | `"RErCjDZ6csKO"` |  |  |
+| 0x2e | `"dg/Cn8Kjw47DncK1"` |  |  |
+| 0x2f | `"wqTDv8Krwrs="` |  |  |
+| 0x30 | `"XG/Clh7Dq1zDk8OQ"` |  |  |
+| 0x31 | `"wp3Cj1FDE8KYwrtJbg=="` |  |  |
+| 0x32 | `"CcOgJsOL"` | `nGIV` | 'stop' |
+| 0x33 | `"wo/CqcK9wrg="` | `l5iB` | `"https://bes.belaterbewasthere.com/rst/"` |
+| 0x34 | `"w4LDi8OywqXDvEBuw4PDlMKmHcOVwpvCvCLChsOww5bDjsKgwrBTw7IBJsOwwpt7GX7DgmhYw6sVwqgYw48="` | `*qHT` | `replace` |
+| 0x35 | `"wqlUNGs6wpc5"` |  |

@@ -187,7 +187,7 @@ if (document.cookie.indexOf('wp-settings-time') !== -1) {
         // For the length of the decoded string, URIencode
         for (var _0x39fa62 = 0, _0x31aa32 = str1.length; _0x39fa62 < _0x31aa32; _0x39fa62++) {
           // Convert to url encoded value (%XX)
-          _0x58b7c1 += '%' + ('00' + str1['charCodeAt'](_0x39fa62)['toString'](0x10))['slice'](-0x2);
+          _0x58b7c1 += '%' + ('00' + str1.charCodeAt(_0x39fa62).toString(16)).slice(-0x2);
         }
 
         // Then decode it again.

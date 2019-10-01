@@ -84,6 +84,32 @@ It could be just checking to see if the previous function (`_0x29532a`) had been
 ### Decoding the strings
 Details are in the [StringDecoding.md](./StringDecoding.md) document, as there's a lot of data to present and cover
 
+### Looks like Nop at a glance
+After prettifying and looking at the below piece of code, I originally thought it was a nop:
+- the `for` loop seems to be a simple method to url encode a set of data: getting the hex represenation of the character code, padding left to make sure it's two characters, then prepend '%'
+  - eg/ `A` -> `%41`
+- After that, the string is then put through the standard `decodeURIComponent`, which would convert `%41` -> `A`
+
+```js
+// For the length of the decoded string, URIencode
+for (var i = 0, x = str1.length; i < x; i++) {
+  // Convert to url encoded value (%XX)
+  tmpString += '%' + ('00' + str1.charCodeAt(i).toString(16)).slice(-0x2);
+}
+
+// Then decode it again.
+// Originally I thought this was a null action, but commenting this out causes it to fail?
+str1 = decodeURIComponent(tmpString);
+```
+So I commented out the code before continuing with the rest of the investigation.
+
+However, when running the code I noticed it was requesting non-existent properties of objects, and it appeared this was to blame: uncommenting the code led to the code correctly executing, _so this series must do change something of the original string_ and my "at a glance" analysis was wrong.
+So I added a bit of code to check the before and after strings and print any changes, along with the character codes of each string:
+
+<img src=./Assets/urlEncodeDecodeDifferences.png alt="Screenshot of console output, indicating code changes"/>
+
+As you can see, the above process seems to act primarily as a filter for certain values (`194`) and changes some combinations (`195, 155, 195, 143, 194` becomes `219, 207`), with `195` seeming to be a modifier for the subsequent character. If we look in unicode, we find out `194` (`0xc2`) is "XXXXX" and `195` (`0x0c3`) is "XXXXX".
+
 ### MISC
 - Requires jQuery is present in the document
 - Has a portion to detect if `atob` is present on the global context and add it if not
