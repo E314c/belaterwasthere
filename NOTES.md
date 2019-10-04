@@ -108,7 +108,9 @@ So I added a bit of code to check the before and after strings and print any cha
 
 <img src=./Assets/urlEncodeDecodeDifferences.png alt="Screenshot of console output, indicating code changes"/>
 
-As you can see, the above process seems to act primarily as a filter for certain values (`194`) and changes some combinations (`195, 155, 195, 143, 194` becomes `219, 207`), with `195` seeming to be a modifier for the subsequent character. If we look in unicode, we find out `194` (`0xc2`) is "XXXXX" and `195` (`0x0c3`) is "XXXXX".
+As you can see, the above process seems to act primarily as a filter for certain values (`194`) and changes some combinations (`195, 155, 195, 143, 194` becomes `219, 207`), with `195` seeming to be a modifier for the subsequent character. If we look in unicode, we find out `194` (`0xc2`) is ["Latin Capital letter A with circumflex"](https://en.wikipedia.org/wiki/%C3%82) and `195` (`0x0c3`) is ["Latin Capital letter A with tilde"](https://en.wikipedia.org/wiki/%C3%83).
+But in urlencoding, `%C2` and `%C3` are used for prefixing certain characters: https://www.w3schools.com/tags/ref_urlencode.asp. Notice on that page that characters prefixed with `%C2` in UTF8 are identical when encoded from `Windows-1252`, hence they get stripped out, while those prefixed with `%C3` have slightly different codes.
+
 
 ### MISC
 - Requires jQuery is present in the document
@@ -117,7 +119,7 @@ As you can see, the above process seems to act primarily as a filter for certain
     - but this script is not designed to run in NodeJs
   - Suspect it's the use of am exploit bundler
 - There are many process trapping mechanisms: infinite loops, infinite recursion, etc
-  - I've yet to figure out under what circumstances these are triggered, as I've been seeing them in my control runs of the script in a browser environment, but they obviously did not occur when the original sript run
+  - I've yet to figure out under what circumstances these are triggered, as I've been seeing them in my control runs of the script in a browser environment, but they obviously did not occur when the original sript is run
 
 ## Code labels
 Whilst doing the analysis, I found it useful to come up with some labels that I could comment next to features to find them later.

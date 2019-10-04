@@ -27,6 +27,8 @@ This repo represents some work done to understand an attack on a wordpress site.
       },
       ```
       (note: `https://bes.belaterbewasthere.com/reserv//t3.js?` is not a typo)
+      - Attempts to set the `siteurl` and `home` as the urls given above
+        - you can check if these have been sucessful by looking in your general settings in the admin panel
     - `POST /wp-admin/admin-ajax.php` on current domain
       - data : `{"action": "fake", "permalink_structure": 1}`
     - Force page reload by appending `&reload=1` to `window.location`
